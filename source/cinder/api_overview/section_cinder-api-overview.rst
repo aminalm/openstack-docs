@@ -19,12 +19,12 @@ Reference. <http://docs.openstack.org/icehouse/config-reference/content/config_o
 Volume API
 ----------
 
-Table 4.2, “Cinder API Overview - Volume” specifies the valid
+Table 7.2, “Cinder API Overview - Volume” specifies the valid
 operations that can be performed on Cinder volumes. Please note that
 Cinder volumes are identified as CLI command arguments by either their
 names or UUID.
 
-.. _table-4.2:
+.. _table-7.2:
 
 +--------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 | Operation          | CLI Command                   | Description                                                                                                                               |
@@ -52,17 +52,17 @@ names or UUID.
 | Revert to snapshot | ``cinder revert-to-snapshot`` | Restore a Cinder volume to the state and data of the most recent snapshot. This command is only available in microversion 3.40 and above. |
 +--------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
-Table 4.2. Cinder API Overview - Volume
+Table 7.2. Cinder API Overview - Volume
 
 Snapshot API
 ------------
 
-Table 4.3, “Cinder API Overview - Snapshot” specifies the valid
+Table 7.3, “Cinder API Overview - Snapshot” specifies the valid
 operations that can be performed on Cinder snapshots. Please note that
 Cinder snapshots are identified as CLI command arguments by either their
 display name or UUID.
 
-.. _table-4.3:
+.. _table-7.3:
 
 +---------------+-----------------------------------+--------------------------------------------------------+
 | Operation     | CLI Command                       | Description                                            |
@@ -82,12 +82,12 @@ display name or UUID.
 | Show          | ``cinder snapshot-show``          | Show details about a Cinder snapshot                   |
 +---------------+-----------------------------------+--------------------------------------------------------+
 
-Table 4.3. Cinder API Overview - Snapshot
+Table 7.3. Cinder API Overview - Snapshot
 
 Consistency Group API
 ---------------------
 
-Table 4.4, “Cinder API Overview - Consistency Groups” specifies the
+Table 7.4, “Cinder API Overview - Consistency Groups” specifies the
 valid operations that can be performed on Cinder consistency groups.
 Please note that Cinder consistency groups and cgsnapshots are
 identified as CLI command arguments by either their display name or
@@ -96,7 +96,7 @@ Block Storage V3 API. Only Block Storage V2 API supports consistency
 groups. Future releases will involve a migration of existing
 consistency group operations to use generic volume group operations.
 
-.. _table-4.4:
+.. _table-7.4:
 
 +-----------------------------------------------------------------------------+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 | Operation                                                                   | CLI Command                              | Description                                                                                                                        |
@@ -126,17 +126,17 @@ consistency group operations to use generic volume group operations.
 | Create a consistency group from a source consistency group                  | ``cinder consisgroup-create-from-src``   | Copy a consistency group                                                                                                           |
 +-----------------------------------------------------------------------------+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
-Table 4.4. Cinder API Overview - Consistency Groups
+Table 7.4. Cinder API Overview - Consistency Groups
 
 Backup API
 ----------
 
-Table 4.5, “Cinder API Overview - Backup” specifies the valid
+Table 7.5, “Cinder API Overview - Backup” specifies the valid
 operations that can be performed on Cinder backups. Please note that
 Cinder backups are identified as CLI command arguments by either their
 display name or UUID.
 
-.. _table-4.5:
+.. _table-7.5:
 
 +-------------+-----------------------------+------------------------------------------------+
 | Operation   | CLI Command                 | Description                                    |
@@ -152,13 +152,13 @@ display name or UUID.
 | Show        | ``cinder backup-show``      | Show details about a Cinder backup             |
 +-------------+-----------------------------+------------------------------------------------+
 
-Table 4.5. Cinder API Overview - Backup
+Table 7.5. Cinder API Overview - Backup
 
 
 Group API
-----------------
+---------
 
-Table 4.6, "Cinder API Overview - Group" specifies the valid
+Table 7.6, "Cinder API Overview - Group" specifies the valid
 operations that can be performed on Cinder groups. Please note that
 Cinder groups are identified as CLI command arguments by either their
 display name or UUID.
@@ -183,7 +183,7 @@ display name or UUID.
    of each Cinder volume in the group. To enable consistency group snapshots set
    ``consistent_group_snapshot_enabled="<is> True"`` in the group type used.
 
-.. _table-4.6:
+.. _table-7.6:
 
 +-------------------------------------+-----------------------------------+---------------------------------------------------------------------+
 | Operation                           | CLI Command                       | Description                                                         |
@@ -225,19 +225,18 @@ display name or UUID.
 | Set group specs                     | ``cinder group-type-key``         | Set or unset group_spec for a group type.                           |
 +-------------------------------------+-----------------------------------+---------------------------------------------------------------------+
 
-
-Table 4.6. Cinder API Overview - Volume Group
+Table 7.6. Cinder API Overview - Volume Group
 
 
 Volume Type API
 ---------------
 
-Table 4.7, “Cinder API Overview - Volume Type” specifies the valid
+Table 7.7, “Cinder API Overview - Volume Type” specifies the valid
 operations that can be performed on Cinder volume types. Please note
 that Cinder volume types are identified as CLI command arguments by
 either their display name or UUID.
 
-.. _table-4.7:
+.. _table-7.7:
 
 +-------------+--------------------------+------------------------------------+
 | Operation   | CLI Command              | Description                        |
@@ -249,17 +248,17 @@ either their display name or UUID.
 | List        | ``cinder type-list``     | List existing Cinder volume type   |
 +-------------+--------------------------+------------------------------------+
 
-Table 4.7. Cinder API Overview - Volume Type
+Table 7.7. Cinder API Overview - Volume Type
 
 Volume Type Extra Specs API
 ---------------------------
 
-Table 4.8, “Cinder API Overview - Volume Type Extra Specs” specifies
+Table 7.8, “Cinder API Overview - Volume Type Extra Specs” specifies
 the valid operations that can be performed on Cinder volume type extra
 specs. Please note that Cinder volume type extra specs are properties of
 Cinder volume types and are identified by their parent object.
 
-.. _table-4.8:
+.. _table-7.8:
 
 +---------------------+-----------------------------------+----------------------------------------------+
 | Operation           | CLI Command                       | Description                                  |
@@ -269,18 +268,18 @@ Cinder volume types and are identified by their parent object.
 | Unset extra specs   | ``cinder type-key vtype unset``   | Remove extra specs from Cinder volume type   |
 +---------------------+-----------------------------------+----------------------------------------------+
 
-Table 4.8. Cinder API Overview - Volume Type Extra Specs
+Table 7.8. Cinder API Overview - Volume Type Extra Specs
 
 Volume Type QoS Specs API
 -------------------------
 
-Table 4.9, “Cinder API Overview - Volume Type QoS Specs” specifies the
+Table 7.9, “Cinder API Overview - Volume Type QoS Specs” specifies the
 valid operations that can be performed on Cinder volume type QoS specs.
 Please note that Cinder volume type QoS specs are created independently
 of Cinder volume types and are subsequently associated with a Cinder
 volume type.
 
-.. _table-4.9:
+.. _table-7.9:
 
 +--------------------------+-------------------------------+------------------------------------------------------------+
 | Operation                | CLI Command                   | Description                                                |
@@ -300,4 +299,4 @@ volume type.
 | Edit QoS spec            | ``cinder qos-key``            | Set or unset specifications for a Cinder QoS Spec          |
 +--------------------------+-------------------------------+------------------------------------------------------------+
 
-Table 4.9. Cinder API Overview - Volume Type QoS Specs
+Table 7.9. Cinder API Overview - Volume Type QoS Specs

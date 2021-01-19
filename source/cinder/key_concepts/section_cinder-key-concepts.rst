@@ -139,7 +139,7 @@ QoS support for the FlashArray drivers includes the ability to set the
 following capabilities in the OpenStack Block Storage API
 ``cinder.api.contrib.qos_specs_manage`` qos specs extension module:
 
-.. _table-4.1:
+.. _table-7.1:
 
 +-----------------+-------------------------------------------------------------------------------------+
 | Option          | Description                                                                         |
@@ -149,7 +149,7 @@ following capabilities in the OpenStack Block Storage API
 | maxBWS          | The maximum number of IOPS allowed for this volume. Limits: 100 - 100 million       |
 +-----------------+-------------------------------------------------------------------------------------+
 
-Table 4.1a. FlashArray QoS Options
+Table 7.1. FlashArray QoS Options
 
 .. note::
    The FlashArray driver utilizes volume-types for QoS settings and
