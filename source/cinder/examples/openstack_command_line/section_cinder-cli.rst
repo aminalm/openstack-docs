@@ -281,14 +281,14 @@ spec, and lastly associate the QoS spec with the volume type.
 
 ::
 
-    $ cinder qos-create qos_demo maxIOPS=100
+    $ cinder qos-create qos_demo consumer="front-end' read_iops_sec=100
     +----------+--------------------------------------+
     | Property |                Value                 |
     +----------+--------------------------------------+
-    | consumer |               back-end               |
+    | consumer |               front-end               |
     |    id    | db081cde-1a9a-41bd-a8a3-a0259db7409b |
     |   name   |               qos_demo               |
-    |  specs   |         {u'maxIOPS': u'100'}         |
+    |  specs   |      {u'read_iops_sec': u'100'}      |
     +----------+--------------------------------------+
 
 ::
@@ -298,11 +298,11 @@ spec, and lastly associate the QoS spec with the volume type.
 ::
 
     $ cinder qos-list
-    +--------------------------------------+----------+----------+----------------------+
-    |                  ID                  |   Name   | Consumer |        specs         |
-    +--------------------------------------+----------+----------+----------------------+
-    | db081cde-1a9a-41bd-a8a3-a0259db7409b | qos_demo | back-end | {u'maxIOPS': u'100'} |
-    +--------------------------------------+----------+----------+----------------------+
+    +--------------------------------------+----------+-----------+----------------------------+
+    |                  ID                  |   Name   | Consumer  |        specs               |
+    +--------------------------------------+----------+-----------+----------------------------+
+    | db081cde-1a9a-41bd-a8a3-a0259db7409b | qos_demo | front-end | {u'read_iops_sec': u'100'} |
+    +--------------------------------------+----------+-----------+----------------------------+
 
 ::
 

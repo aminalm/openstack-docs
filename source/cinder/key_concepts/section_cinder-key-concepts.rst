@@ -128,32 +128,10 @@ Quality of Service
 ------------------
 
 The Cinder Quality of Service (QoS) support for volumes can be enforced
-either at the hypervisor or at the storage subsystem (``backend``), or
-both.
+either at the hypervisor.
 
-Within the FlashArray each volume may be configured with
-maximum IOPS and bandwidth values that are strictly
-enforced within the system.
-
-QoS support for the FlashArray drivers includes the ability to set the
-following capabilities in the OpenStack Block Storage API
-``cinder.api.contrib.qos_specs_manage`` qos specs extension module:
-
-.. _table-4.1:
-
-+-----------------+-------------------------------------------------------------------------------------+
-| Option          | Description                                                                         |
-+=================+=====================================================================================+
-| maxIOPS         | The maximum bandwidth for this volume in MB/s. Limits: 1 - 524288 (512Gb/s).        |
-+-----------------+-------------------------------------------------------------------------------------+
-| maxBWS          | The maximum number of IOPS allowed for this volume. Limits: 100 - 100 million       |
-+-----------------+-------------------------------------------------------------------------------------+
-
-Table 4.1a. FlashArray QoS Options
-
-.. note::
-   The FlashArray driver utilizes volume-types for QoS settings and
-   allows dynamic changes to QoS.
+For more details of the parameters that can be set for hypervisor
+enforced QoS refer to the `Cinder basic volume quality of service documentation.<https://docs.openstack.org/cinder/latest/admin/blockstorage-basic-volume-qos.html>`_
 
 Generic Volume Groups
 ---------------------
