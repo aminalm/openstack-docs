@@ -95,7 +95,7 @@ if watermark == '':
     ).read().strip(' \n\t').lower().split('\n'))
     if len(stable_branches) == 0 or '' in stable_branches:
         # Can be removed as soon as we have stable branches
-        watermark = "WALLABY DRAFT"
+        watermark = "VICTORIA DRAFT"
     else:
         last_stable_release = stable_branches[-1].split('stable/')[-1]
         try:
@@ -123,16 +123,16 @@ sphinxmark_text_size = 100
 # General information about the project.
 project = u'Pure Storage OpenStack Docs'
 bug_tag = u'docs, dog'
-copyright = u'2021, Pure Storage Inc.'
+copyright = u'2020, Pure Storage Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '2021.1'
+version = '2020.2'
 # The full version, including alpha/beta/rc tags.
-release = '2021.1'
+release = '2020.2'
 
 # A few variables have to be set for the log-a-bug feature.
 #   giturl: The location of conf.py on Git. Must be set manually.
@@ -201,7 +201,6 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#html_theme = 'openstackdocs'
 html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
