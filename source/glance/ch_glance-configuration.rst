@@ -104,7 +104,7 @@ use the image you prefer and replace the URL accordingly.
 
 ::
 
-    $ wget https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64-disk-kvm.img | glance image-create --name=ubutu-focal-image --container-format=bare --disk-format=qcow2 --file=focal-server-cloudimg-amd64-disk-kvm.img --progress
+    $ wget https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64-disk-kvm.img | glance image-create --name=ubuntu-focal-image --container-format=bare --disk-format=qcow2 --file=focal-server-cloudimg-amd64-disk-kvm.img --min-disk=3 --progress
 
 5) Boot from Cinder
 
