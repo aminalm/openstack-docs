@@ -104,7 +104,7 @@ use the image you prefer and replace the URL accordingly.
 
 ::
 
-    $ wget https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64-disk-kvm.img | openstack image create ubutu-focal-image --container-format bare --disk-format qcow2 --file focal-server-cloudimg-amd64-disk-kvm.img --min-disk 3
+    $ wget https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64-disk-kvm.img | openstack image create ubuntu-focal-image --container-format bare --disk-format qcow2 --file focal-server-cloudimg-amd64-disk-kvm.img --min-disk 3
 
 5) Boot from Cinder
 
