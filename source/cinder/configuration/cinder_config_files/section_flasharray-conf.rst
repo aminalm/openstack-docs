@@ -14,10 +14,10 @@ For more information on the configuration and best practices for
 specific OpenStack releases please visit
 the following link: http://support.purestorage.com/Solutions/OpenStack
 
-Table 4.18 lists the required storage system attributes used in the
+Table 7.13 lists the required storage system attributes used in the
 ``/etc/cinder/cinder.conf`` configuration file.
 
-.. _table-4.18:
+.. _table-7.13:
 
 +--------------------------------------+----------------------------+---------------------------------------------+
 | FlashArray Attribute                 | Default                    | Description                                 |
@@ -27,7 +27,7 @@ Table 4.18 lists the required storage system attributes used in the
 | ``pure_api_token``                   | None                       | FlashArray authorization API token          |
 +--------------------------------------+----------------------------+---------------------------------------------+
 
-Table 4.18. Required FlashArray Attributes
+Table 7.13. Required FlashArray Attributes
 
 Add the following lines to the file, replacing login and password with
 the cluster admin login credentials
@@ -54,7 +54,7 @@ in the ``[pure]`` section of the ``/etc/cinder/cinder.conf``
 configuration file to control the interaction between the storage
 system and the OpenStack Cinder service. (See Table 4.19.)
 
-.. _table-4.19:
+.. _table-7.14:
 
 +------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | FlashArray Attribute                                 | Default                    | Description                                                                                                                                                                                                     |
@@ -86,7 +86,7 @@ system and the OpenStack Cinder service. (See Table 4.19.)
 | ``pure_iscsi_cidr``                                  | ``0.0.0.0/0``              | CIDR of FlashArray iSCSI targets hosts are allowed to connect to. Default will allow connection to any IPv4 address.                                                                                            |
 +------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Table 4.19. Optional FlashArray Attributes
+Table 7.14. Optional FlashArray Attributes
 
 FlashArray Replication Setup
 ----------------------------
@@ -146,5 +146,5 @@ async replication:
    $ openstack volume type set --property replication_enabled='<is> True' ReplicationType
    $ openstack volume type set --property replication_type='<in> async' ReplicationType
 
-Refer to Table 4.19 for optional configuration parameters available
+Refer to Table 7.14 for optional configuration parameters available
 for async replication configuration.

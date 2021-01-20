@@ -22,7 +22,7 @@ of Glance Image Cache for Cinder with FlashArray for iSCSI or Fibre Channel:
 | 6   | Verify functionality                                  |         |
 +-----+-------------------------------------------------------+---------+
 
-Table 5.2: Checklist of Steps for Enhanced Instance Creation
+Table 5.1: Checklist of Steps for Enhanced Instance Creation
 
 |
 

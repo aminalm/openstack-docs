@@ -37,7 +37,7 @@ object storage nodes. These include:
 .. figure:: ../images/swift_compare.png
    :alt: Traditional and FlashArray Swift Stack Comparison
 
-   Traditional and FlashArray Swift Stack Comparison
+   Figure 8.1. Traditional and FlashArray Swift Stack Comparison
 
 On the left of :ref:`swift_compare` is a traditional
 Swift cluster, which has a total storage capacity of 240TB. This

@@ -58,10 +58,10 @@ There exist three property sets that can be referenced in the
   backend. This would be analogous to a FlashArray
   system. They can be invoked as ``stats.<property>``.
   For example: ``stats.allocated_capacity_gb``.
-  ":ref:`Table 4.12<table-4.12>`" lists the
+  ":ref:`Table 7.10<table-7.10>`" lists the
   host stats that can be used for FlashArray systems.
 
-.. _table-4.12:
+.. _table-7.10:
 
 +-----------------------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Property                                | Type      | Description                                                                                                                                                  |
@@ -89,17 +89,17 @@ There exist three property sets that can be referenced in the
 | ``reserved_percentage``                 | Float     | The reserved percentage for each pool. This specifies how much space is to be reduced from total_capacity when performing over subscription calculations.    |
 +-----------------------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Table 4.12 Host statistics
+Table 7.10 Host statistics
 
 - **Requested volume properties**: These statistics are used
   to control scheduling based on the specifications
   of the volume requested during creation. These parameters
   can be referenced as ``volume.<property>``. For example,
   the size of the requested volume is returned by ``volume.size``.
-  ":ref:`Table 4.13<table-4.13>`" contains a list of statistics
+  ":ref:`Table 7.11<table-7.11>`" contains a list of statistics
   that can be queried from a volume request.
 
-.. _table-4.13:
+.. _table-7.11:
 
 +-----------------------------------------+------------------------------------------------------------------------------------------+
 | Property                                | Description                                                                              |
@@ -140,7 +140,7 @@ Table 4.12 Host statistics
 +-----------------------------------------+------------------------------------------------------------------------------------------+
 
 
-Table 4.13 Volume properties available for Filter and Goodness functions
+Table 7.11 Volume properties available for Filter and Goodness functions
 
 .. important::
 
@@ -151,7 +151,7 @@ Table 4.13 Volume properties available for Filter and Goodness functions
 - **Backend specific capabilities**: The following table
   contains a list of capabilities reported by the FlashArray Cinder driver.
 
-.. _table-4.14:
+.. _table-7.12:
 
 +-----------------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------+
 | Property                          | Type      | Description                                                                                                              |
@@ -185,7 +185,7 @@ Table 4.13 Volume properties available for Filter and Goodness functions
 | ``queue_depth``                   | String    | Current queue depth for the array.                                                                                       |
 +-----------------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------+
 
-Table 4.14 Backend capabilities reported by FlashArray Cinder drivers
+Table 7.12 Backend capabilities reported by FlashArray Cinder drivers
 
 Configuration
 -------------

@@ -28,7 +28,7 @@ There are four processes that make up the Cinder service:
    :alt: Cinder Processes Concept Diagram
    :scale: 80
 
-   Figure 4.2. Cinder Processes Concept Diagram
+   Figure 7.2. Cinder Processes Concept Diagram
 
 Volume Creation Workflow
 ------------------------
@@ -39,7 +39,7 @@ requests the creation of a new volume from Cinder.
 .. figure:: ../../images/cinder_create_volume_process.png
    :alt: Cinder Workflow - Volume Creation
 
-   Figure 4.3. Cinder Workflow - Volume Creation
+   Figure 7.3. Cinder Workflow - Volume Creation
 
 1. Client issues request to create volume through invoking REST API
    (client may use ``python-cinderclient`` CLI utility).
@@ -80,7 +80,7 @@ requests that a Cinder volume be attached to a Nova compute instance.
 .. figure:: ../../images/nova_volume_attach_process.png
    :alt: Cinder & Nova Workflow - Volume Attach
 
-   Figure 4.4. Cinder & Nova Workflow - Volume Attach
+   Figure 7.4. Cinder & Nova Workflow - Volume Attach
 
 1. Client issues request to attach volume through invoking Nova REST API
    (client may use ``python-novaclient`` CLI utility).
@@ -121,7 +121,7 @@ requests that a Cinder volume be backed up.
 .. figure:: ../../images/cinder_backup_process.png
    :alt: Cinder Backup Workflow
 
-   Figure 4.5. Cinder Backup Workflow
+   Figure 7.5. Cinder Backup Workflow
 
 1. Client issues request to backup a Cinder volume by invoking REST API
    (client may use ``python-cinderclient`` CLI utility).
@@ -163,7 +163,7 @@ requests that a Cinder backup be restored.
 .. figure:: ../../images/cinder_backup_process.png
    :alt: Cinder Restore Workflow
 
-   Figure 4.6. Cinder Restore Workflow
+   Figure 7.6. Cinder Restore Workflow
 
 1. Client issues request to restore a Cinder volume by invoking REST API
    (client may use ``python-cinderclient`` CLI utility).

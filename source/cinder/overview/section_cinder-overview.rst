@@ -26,4 +26,4 @@ solution for block storage provisioning and lifecycle management.
 .. figure:: ../../images/cinder_nova_architecture.png
    :alt: Cinder and Nova Logical Architecture
 
-   Figure 4.1. Cinder and Nova Logical Architecture
+   Figure 7.1. Cinder and Nova Logical Architecture
