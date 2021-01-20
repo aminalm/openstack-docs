@@ -52,7 +52,7 @@ Optional Cinder Configuration Attributes
 You can optionally use the following attributes specific to FlashArray
 in the ``[pure]`` section of the ``/etc/cinder/cinder.conf``
 configuration file to control the interaction between the storage
-system and the OpenStack Cinder service. (See Table 4.19.)
+system and the OpenStack Cinder service. (See Table 7.14.)
 
 .. _table-7.14:
 
@@ -146,5 +146,5 @@ async replication:
    $ openstack volume type set --property replication_enabled='<is> True' ReplicationType
    $ openstack volume type set --property replication_type='<in> async' ReplicationType
 
-Refer to Table 7.14 for optional configuration parameters available
+Refer to ":ref:`Table 7.14<table-7.14>`" for optional configuration parameters available
 for async replication configuration.

@@ -156,7 +156,7 @@ Table 7.5. Cinder API Overview - Backup
 
 
 Group API
-----------------
+---------
 
 Table 7.6, "Cinder API Overview - Group" specifies the valid
 operations that can be performed on Cinder groups. Please note that
@@ -224,7 +224,6 @@ display name or UUID.
 +-------------------------------------+-----------------------------------+---------------------------------------------------------------------+
 | Set group specs                     | ``cinder group-type-key``         | Set or unset group_spec for a group type.                           |
 +-------------------------------------+-----------------------------------+---------------------------------------------------------------------+
-
 
 Table 7.6. Cinder API Overview - Volume Group
 
