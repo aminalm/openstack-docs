@@ -6,7 +6,6 @@ Object Storage Service (Swift)
 
    swift/section_swift-overview.rst
    swift/section_swift-flasharray.rst
-   swift/section_swift-disk-pools.rst
    swift/section_swift-partitioning.rst
 
 OpenStack Object Storage provides a fully distributed, scale-out,
