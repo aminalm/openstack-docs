@@ -247,7 +247,7 @@ calculated and uses the array with the lowest write latency.
    volume_driver = cinder.volume.drivers.pure.PureISCSIDriver
    san_ip = 192.168.1.32
    pure_api_token = f29643cf-bf70-a1c5-222a-a3015f86d7eA
-   filter_function = "capabilities.total_volumes < 500"a
+   filter_function = "capabilities.total_volumes < 500"
 
 This example shows how the ``filter_function`` is set for the
 available backends. This example prevents creating a new volume on an array
