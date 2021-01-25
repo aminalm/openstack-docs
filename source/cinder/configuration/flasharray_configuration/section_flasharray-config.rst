@@ -29,5 +29,5 @@ Cluster Admin Account
 
 Pure Storage recommends creating an unique user account for OpenStack
 to help audit API requests from each OpenStack. This account may be
-local or integrated into an active directory, or similar, account
+local or integrated into an Active Directory, or similar, account
 management system.
