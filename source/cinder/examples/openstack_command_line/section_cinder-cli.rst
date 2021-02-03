@@ -409,7 +409,7 @@ consistency group.
 
 ::
 
-    $ cinder cgsnapshot-create 2cc3d172-af05-421b-babd-01d4cd91078d --name snap-of-cg1
+    $ cinder cgsnapshot-create cg1 --name snap-of-cg1
     +---------------------+--------------------------------------+
     |       Property      |                Value                 |
     +---------------------+--------------------------------------+
@@ -430,6 +430,26 @@ consistency group.
     | id    | b2bf7a53-d393-4abb-9ec6-b43cf7c50ee8 |
     | name  | snap-of-cg1                          |
     +-------+--------------------------------------+
+
+::
+
+    $ cinder consisgroup-create-from-src --source-cg cg1 --name 'new-cg' --description 'cloned cg'
+    +----------+--------------------------------------+
+    | Property | Value                                |
+    +----------+--------------------------------------+
+    | id       | f7320a40-bd6a-4654-baed-d04d896594c3 |
+    | name     | new-cg                               |
+    +----------+--------------------------------------+
+
+::
+
+    $ cinder consisgroup-create-from-src --cgsnapshot snap-of-cg1 --name from-snap-cg
+    +----------+--------------------------------------+
+    | Property | Value                                |
+    +----------+--------------------------------------+
+    | id       | f7098133-1fa4-47ed-8172-08b328e7fdd2 |
+    | name     | from-snap-cg                         |
+    +----------+--------------------------------------+
 
 To delete a consistency group, first make sure that any snapshots of the
 consistency group have first been deleted, and that any volumes in the
