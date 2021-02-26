@@ -15,6 +15,7 @@ Deployment and Operations Guide
    Block Storage (Cinder) <ch_cinder.rst>
    Object Storage (Swift) <ch_swift.rst>
    Shared Filesystems (Manila) <ch_manila.rst>
+   Dashboard (Horizon) <ch_horizon.rst>
 
    Appendix <ch_appendix.rst>
 

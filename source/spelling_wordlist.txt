@@ -158,6 +158,7 @@ hostnames
 hotspots
 hpux
 html
+httpd
 hypervisor
 hypervisors
 iSCSI
