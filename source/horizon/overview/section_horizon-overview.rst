@@ -27,5 +27,5 @@ both Users and System/Cloud Administrators.
 
 .. note::
 
-    Currently the Pure Storage Horizon Plugin currently only provides
+    Currently the Pure Storage Horizon Plugin only provides
     support for FlashArrays configured under the Cinder project.
