@@ -14,6 +14,7 @@ Deployment and Operations Guide
    Compute Service (Nova) <ch_nova.rst>
    Block Storage (Cinder) <ch_cinder.rst>
    Object Storage (Swift) <ch_swift.rst>
+   Shared Filesystems (Manila) <ch_manila.rst>
 
    Appendix <ch_appendix.rst>
 

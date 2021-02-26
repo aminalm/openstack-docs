@@ -23,6 +23,8 @@ FC
 Failover
 Fibre
 Filesystems
+FlashBlade
+FlashBladeShareDriver
 Fouts
 FQDN
 Gb
@@ -148,6 +150,7 @@ factoryDefault
 failover
 filesystem
 freenode
+flashblade
 geo
 gid
 handoff
@@ -204,6 +207,7 @@ openstack
 optimizations
 os
 overcloud
+overriden
 oversubscription
 overutilized
 pNFS
@@ -231,6 +235,7 @@ subnet
 subnets
 suid
 supportability
+supercedes
 svc
 terabytes
 throughputs
