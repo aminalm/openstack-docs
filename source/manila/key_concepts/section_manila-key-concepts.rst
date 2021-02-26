@@ -163,9 +163,9 @@ specified.
    newly created share may or may not end up on a backend with the
    associated capability. Set the extra spec explicitly to ``False``,
    if you would like your shares to be created only on backends that do
-   not support the associated capabilities. For a table of NetApp
+   not support the associated capabilities. For a table of Pure Storage
    supported extra specs, refer to Table 9.11,
-   ":ref:`NetApp supported Extra Specs for use with Manila Share Types<table-9.11>`".
+   ":ref:`Pure Storage supported Extra Specs for use with Manila Share Types<table-9.11>`".
 
 .. important::
     Currently the Pure Storage FlashBlade driver DOES NOT support
@@ -182,14 +182,6 @@ snapshots simultaneously. Share group snapshots can be created from
 an existing Manila share group. All shares stored in a share group
 snapshot can be restored by creating a share group from a share group
 snapshot.
-
-.. note::
-
-   When using NetApp's Manila drivers, Share Groups are synonymous
-   with the conventional ``Consistency Group`` construct. Beginning
-   with the Rocky release, OpenStack recommends the usage of Share
-   Groups to create a grouping construct which operates on groups
-   of shares.
 
 .. note::
 

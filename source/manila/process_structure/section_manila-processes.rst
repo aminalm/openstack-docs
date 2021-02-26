@@ -100,7 +100,7 @@ for any client to access a shared filesystem.
 3. ``manila-share`` reads message from queue, invokes Manila driver
    corresponding to share to be attached.
 
-4. NetApp Manila driver creates appropriate export policies for the
+4. Pure Storage Manila driver creates appropriate export policies for the
    share and access type provided.
 
 5. ``manila-share`` process posts response information to ``manila-api``

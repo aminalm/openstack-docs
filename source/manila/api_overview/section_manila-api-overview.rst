@@ -308,11 +308,7 @@ Table 9.10. Manila API Overview - Share Server Migration
 
    Several parameters need to be specified when starting migration for
    a share server. For a list of supported parameters, refer to the help text
-   by running ``manila help share-server-migration-start``. For example, the
-   NetApp driver doesn't support migrate share servers non-disruptively. To
-   have the migration accepted by the NetApp driver, ``nondisruptive`` must be
-   set to ``False``, while ``preserve_snapshots`` and ``writable`` can be set
-   to ``True``.
+   by running ``manila help share-server-migration-start``.
 
 .. note::
    "Get Progress" operation can't provide the current progress percentage of

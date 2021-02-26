@@ -122,7 +122,6 @@ bootable
 bootloader
 bugfixes
 burstIOPS
-cDOT
 cgsnapshot
 cgsnapshots
 chmod
