@@ -58,6 +58,7 @@ configuration file (``manila.conf``)::
     driver_handles_share_servers = False
     flashblade_mgmt_vip = FlashBlade management VIP
     flashblade_data_vip = FlashBlade data VIP
+    flashblade_api = FlashBlade API token
     flashblade_eradicate = { True | False }
 
 -  Be sure that the value of the ``enabled_share_backends`` option in
