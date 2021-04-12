@@ -18,9 +18,9 @@ be found at http://support.purestorage.com/Solutions/Openstack/.
 
 The Pure Storage OpenStack team presently intends to provide maintenance of
 the three most recently released versions of OpenStack. For example,
-during Wallaby development, all code that is part of the Train, Ussuri and
-Victoria official branches are supported. Upon Wallaby release, direct
-maintenance for Train would be dropped and maintenance for Wallaby is
+during Xena development, all code that is part of the Ussuri, Train and
+Victoria official branches are supported. Upon Xena release, direct
+maintenance for Ussuri would be dropped and maintenance for Wallaby is
 added.
 
 If your host operating system, hypervisor, and other components involved

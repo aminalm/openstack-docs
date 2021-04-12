@@ -95,7 +95,7 @@ if watermark == '':
     ).read().strip(' \n\t').lower().split('\n'))
     if len(stable_branches) == 0 or '' in stable_branches:
         # Can be removed as soon as we have stable branches
-        watermark = "WALLABY DRAFT"
+        watermark = "XENA DRAFT"
     else:
         last_stable_release = stable_branches[-1].split('stable/')[-1]
         try:
