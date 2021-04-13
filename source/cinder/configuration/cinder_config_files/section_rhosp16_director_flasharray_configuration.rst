@@ -133,7 +133,7 @@ smaller environment files:
       configuration_name=value
 
   See `Optional Cinder Configuration Attributes (RHOSP)
-  <../section_flasharray-conf-train.html#optional-cinder-configuration-attributes>`_
+  <./section_flasharray-conf-train.html#optional-cinder-configuration-attributes>`_
   for a complete list of the available Cinder Configuration Options.
 
 .. warning::
