@@ -5,3 +5,4 @@ Manila Configuration Files
    :maxdepth: 1
 
    manila_config_files/section_flashblade-conf.rst
+   manila_config_files/section_flasharray-conf.rst
