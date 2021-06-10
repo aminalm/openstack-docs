@@ -134,6 +134,7 @@ conf
 config
 contrib
 copyoffload
+dataplane
 dedup
 dedupe
 deduplication

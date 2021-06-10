@@ -169,8 +169,7 @@ specified.
 
 .. important::
     Currently the Pure Storage FlashBlade driver DOES NOT support
-    any of the above mentioned extra-specs, with the exception of
-    ``snapshot_support``.
+    the extra-spec ``create_share_from_snapshot_support``.
 
 Share Group
 -----------

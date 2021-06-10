@@ -332,11 +332,13 @@ leveraged when used with the ``manila type-key`` command.
 
 .. _table-9.11:
 
-+-----------------------+------------+-----------------------------------------------------------------------+
-| Extra Spec            | Type       | Description                                                           |
-+=======================+============+=======================================================================+
-| ``snapshot_support``  | Boolean    | Choose whether to allow the creation of snapshots for a share type.   |
-+-----------------------+------------+-----------------------------------------------------------------------+
++---------------------------------+------------+-------------------------------------------------------------------------------------+
+| Extra Spec                      | Type       | Description                                                                         |
++=================================+============+=====================================================================================+
+| ``snapshot_support``            | Boolean    | Choose whether to allow the creation of snapshots for a share type.                 |
++---------------------------------+------------+-------------------------------------------------------------------------------------+
+| ``revert_to_snapshot_support``  | Boolean    | Choose whether to allow the revertion of a share from a snapshot for a share type.  |
++---------------------------------+------------+-------------------------------------------------------------------------------------+
 
 Table 9.11. Manila API Overview - FlashBlade Supported Extra Specs for use with Manila Share Types
 

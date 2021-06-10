@@ -130,7 +130,7 @@ In this section, we create a share with the general type.
     | has_replicas                          | False                                |
     | user_id                               | 991c3f4bca814130897d9988b93301da     |
     | create_share_from_snapshot_support    | False                                |
-    | revert_to_snapshot_support            | False                                |
+    | revert_to_snapshot_support            | True                                |
     | share_group_id                        | None                                 |
     | source_share_group_snapshot_member_id | None                                 |
     | mount_snapshot_support                | False                                |
@@ -374,7 +374,7 @@ Next we'll create two shares in the new share group.
     | has_replicas                          | False                                |
     | user_id                               | 991c3f4bca814130897d9988b93301da     |
     | create_share_from_snapshot_support    | False                                |
-    | revert_to_snapshot_support            | False                                |
+    | revert_to_snapshot_support            | True                                |
     | share_group_id                        | 96bcb0e1-e595-4724-9fc8-4715eeff47f1 |
     | source_share_group_snapshot_member_id | None                                 |
     | mount_snapshot_support                | False                                |
