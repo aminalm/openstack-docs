@@ -1,35 +1,36 @@
-.. _flashblade_conf:
+.. _manila_flasharray_conf:
 
-Pure Storage Driver for FlashBlade
+Pure Storage Driver for FlashArray
 ==================================
 
-FlashBlade Manila Driver Configuration
+FlashArray Manila Driver Configuration
 --------------------------------------
 
 The OpenStack Manila driver enables communication between OpenStack
-and FlashBlade systems. The user can use information from
-the FlashBlade to configure the driver by modifying the
+and FlashArray systems with FA-Files enabled on the array. 
+The user can use information from
+the FlashArray to configure the driver by modifying the
 ``/etc/manila/manila.conf`` service file on the controller host.
 For more information on the configuration and best practices for 
 specific OpenStack releases please visit
 the following link: http://support.purestorage.com/Solutions/OpenStack
 
-Table 9.13 lists the required storage system attributes used in the
+Table 9.15 lists the required storage system attributes used in the
 ``/etc/manila/manila.conf`` configuration file.
 
-.. _table-9.13:
+.. _table-9.15:
 
 +--------------------------------------+----------------------------+---------------------------------------------+
 | FlashBlade Attribute                 | Default                    | Description                                 |
 +======================================+============================+=============================================+
-| ``flashblade_mgmt_vip``              | None                       | FlashBlade Management VIP                   |
+| ``flasharray_mgmt_vip``              | None                       | FlashArray Management VIP                   |
 +--------------------------------------+----------------------------+---------------------------------------------+
-| ``flashblade_data_vip``              | None                       | FlashBlade Data VIP                         |
+| ``flasharray_file_vip``              | None                       | FlashArray Files VIP                        |
 +--------------------------------------+----------------------------+---------------------------------------------+
-| ``flashblade_api``                   | None                       | FlashBlade authorization API token          |
+| ``flasharray_api``                   | None                       | FlashArray authorization API token          |
 +--------------------------------------+----------------------------+---------------------------------------------+
 
-Table 9.13. Required FlashBlade Attributes
+Table 9.15. Required FlashArray Attributes
 
 Add the following lines to the file, replacing login and password with
 the cluster admin login credentials
@@ -38,29 +39,30 @@ the cluster admin login credentials
 
 
     [DEFAULT]
-    enabled_share_backends=flashblade
+    enabled_share_backends=flasharray
 
-    [flashblade]
+    [flasharray]
     driver_handles_share_servers = False
-    share_backend_name=flashblade
-    share_driver=manila.share.drivers.purestorage.flashblade.FlashBladeShareDriver
-    flashblade_mgmt_ip=192.168.1.34
-    flashblade_data_ip=192.168.1.35
-    flashblade_api=<API token>
+    share_backend_name=flasharray
+    share_driver=manila.share.drivers.purestorage.flasharray.FlashArrayShareDriver
+    flasharray_mgmt_ip=192.168.1.34
+    flasharray_file_ip=192.168.1.35
+    flasharray_api=<API token>
 
 Optional Manila Configuration Attributes
 ----------------------------------------
 You can optionally use the following attributes specific to FlashArray
 in the ``[pure]`` section of the ``/etc/manila/manila.conf``
 configuration file to control the interaction between the storage
-system and the OpenStack Manila service. (See Table 9.13.)
+system and the OpenStack Manila service. (See Table 9.16.)
 
-.. _table-9.14:
+.. _table-9.16:
 
 +--------------------------------------------------+----------------------------+----------------------------------------------------+
 | FlashBlade Attribute                             | Default      | Description                                                      |
 +==================================================+============================+====================================================+
 | ``flashblade_eradicate``                         | True         | Enable auto-eradication of deleted shares and snapshots.         |
+| ``pure_automatic_max_oversubscription_ratio``    | True         | Allow FlashArray to calculate the array oversubscription ratio.  |
 +--------------------------------------------------+----------------------------+----------------------------------------------------+
 
-Table 9.14. Optional FlashBlade Attributes
+Table 9.16. Optional FlashArray Attributes

@@ -337,8 +337,33 @@ leveraged when used with the ``manila type-key`` command.
 +=================================+============+=====================================================================================+
 | ``snapshot_support``            | Boolean    | Choose whether to allow the creation of snapshots for a share type.                 |
 +---------------------------------+------------+-------------------------------------------------------------------------------------+
-| ``revert_to_snapshot_support``  | Boolean    | Choose whether to allow the revertion of a share from a snapshot for a share type.  |
+| ``revert_to_snapshot_support``  | Boolean    | Choose whether to allow the reversion of a share from a snapshot for a share type.  |
 +---------------------------------+------------+-------------------------------------------------------------------------------------+
 
 Table 9.11. Manila API Overview - FlashBlade Supported Extra Specs for use with Manila Share Types
+
+FlashArray supported Extra Specs for use with Manila Share Types
+----------------------------------------------------------------
+
+When the Pure Storage FlashArray driver is used you can leverage a
+number of extra specs with Manila share types to ensure that Manila
+shares are created on storage backends that have certain properties
+available.
+
+Extra specs are associated with Manila share types, so that when users
+request shares of a particular share type, they are created on storage
+backends that meet the list of requirements. 
+
+Table 9.12, defines the currently supported extra specs that can be
+leveraged when used with the ``manila type-key`` command.
+
+.. _table-9.12:
+
++---------------------------------+------------+-------------------------------------------------------------------------------------+
+| Extra Spec                      | Type       | Description                                                                         |
++=================================+============+=====================================================================================+
+| ``snapshot_support``            | Boolean    | Choose whether to allow the creation of snapshots for a share type.                 |
++---------------------------------+------------+-------------------------------------------------------------------------------------+
+
+Table 9.12. Manila API Overview - FlashArray Supported Extra Specs for use with Manila Share Types
 

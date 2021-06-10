@@ -1,4 +1,4 @@
-Flashblade Configuration
+FlashBlade Configuration
 ========================
 
 .. _manila_flashblade_prerequisites:
@@ -23,7 +23,7 @@ The Management Virtual IP (MVIP) enables cluster management through a 1GbE conne
 Data VIP
 --------------
 Users and hosts can access the FlashBlade using virtual IP addresses.
-A Data Virtual IP (MVIP) enables dataplane access through the FlashBlade Link
+A Data Virtual IP (VIP) enables dataplane access through the FlashBlade Link
 Aggregation Groups.
 
 Admin Account
