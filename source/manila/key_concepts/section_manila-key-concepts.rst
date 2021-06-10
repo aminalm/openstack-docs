@@ -129,7 +129,7 @@ criteria.
 
    For a table of Pure Storage supported extra specs, refer to Table 9.11,
    ":ref:`FlashBlade supported Extra Specs for use with Manila Share Types<table-9.11>`"
-   and Table 9.11, 
+   and Table 9.12, 
    ":ref:`FlashArray supported Extra Specs for use with Manila Share Types<table-9.12>`"
 
 Snapshot
@@ -172,6 +172,7 @@ specified.
 .. important::
     Currently the Pure Storage FlashBlade driver DOES NOT support
     the extra-spec ``create_share_from_snapshot_support``.
+
     Currently the Pure Storage FlashArray driver DOES NOT support
     the extra-specs ``create_share_from_snapshot_support`` or
     ``revert_from_snaphot``.
