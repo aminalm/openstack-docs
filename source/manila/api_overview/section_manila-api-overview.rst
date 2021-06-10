@@ -113,9 +113,11 @@ display name or UUID.
    newly created share may or may not end up on a backend with the
    associated capability. Set the extra spec explicitly to ``False``,
    if you would like your shares to be created only on backends that do
-   not support the associated capabilities. For a table of Pure Storage
-   FlashBlade supported extra specs, refer to
-   :ref:`Table 9.11, “FlashBlade Supported Extra Specs for use with Manila Share Types”<table-9.11>`.
+   not support the associated capabilities.
+   For a table of Pure Storage FlashBlade supported extra specs, refer to
+   :ref:`Table 9.11, “FlashBlade Supported Extra Specs for use with Manila Share Types”<table-9.11>`
+   and for the Pure Storage FlashArray supported extra specs, refer to
+   :ref:`Table 9.12, “FlashBlade Supported Extra Specs for use with Manila Share Types”<table-9.12>`
 
 +----------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Operation            | CLI Command                       | Description                                                                                                                                                                          |
@@ -126,7 +128,7 @@ display name or UUID.
 +----------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | List                 | ``manila snapshot-list``          | List all Manila snapshots                                                                                                                                                            |
 +----------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Manage*              | ``manila snapshot-manage``        | Bring an existing storage object snapshot under Manila management, specifying the snapshot name as the provider location                                                             |
+| Manage*#             | ``manila snapshot-manage``        | Bring an existing storage object snapshot under Manila management, specifying the snapshot name as the provider location                                                             |
 +----------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Rename               | ``manila snapshot-rename``        | Change the display-name of a Manila snapshot                                                                                                                                         |
 +----------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -134,9 +136,9 @@ display name or UUID.
 +----------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Show                 | ``manila snapshot-show``          | Show details about a Manila snapshot                                                                                                                                                 |
 +----------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Unmanage*            | ``manila snapshot-unmanage``      | Cease management of an existing Manila snapshot without deleting the backing storage object snapshot                                                                                 |
+| Unmanage*#           | ``manila snapshot-unmanage``      | Cease management of an existing Manila snapshot without deleting the backing storage object snapshot                                                                                 |
 +----------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Revert to SnapShot*  | ``manila revert-to-snapshot``     | Revert a Manila share (in place) to the latest snapshot. The ``snapshot_support`` and ``revert_to_snapshot_support`` extra specs must be set to True for the associated share type   |
+| Revert to SnapShot#  | ``manila revert-to-snapshot``     | Revert a Manila share (in place) to the latest snapshot. The ``snapshot_support`` and ``revert_to_snapshot_support`` extra specs must be set to True for the associated share type   |
 +----------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Table 9.4. Manila API Overview - Snapshot
@@ -145,6 +147,8 @@ Table 9.4. Manila API Overview - Snapshot
 
   Operations marked with an asterisk are not supported by the
   FlashBlade Manila driver at this time.
+  Operations marked with a hash are not supported by the
+  FlashArray Manila driver at this time.
 
 Share Type API
 --------------
@@ -228,7 +232,8 @@ Share Replication API
 ---------------------
 
 .. note::
-   These commands are not supported by the Pure Storage FlashBlade Manila driver.
+   These commands are not supported by either the Pure Storage FlashBlade
+   or FlashArray Manila drivers.
 
 +---------------------------+------------------------------------------------+---------------------------------------------------------------------+
 | Operation                 | CLI Command                                    | Description                                                         |
@@ -256,7 +261,8 @@ Share Migration API
 -------------------
 
 .. note::
-   These commands are not supported by the Pure Storage FlashBlade Manila driver.
+   These commands are not supported by either the Pure Storage FlashBlade
+   or FlashArray Manila drivers.
 
 .. _table-9.9:
 
@@ -284,7 +290,8 @@ Share Server Migration API
 --------------------------
 
 .. note::
-   These commands are not supported by the Pure Storage FlashBlade Manila driver.
+   These commands are not supported by either the Pure Storage FlashBlade
+   or FlashArray Manila drivers.
 
 .. _api_overview_table-9.10:
 

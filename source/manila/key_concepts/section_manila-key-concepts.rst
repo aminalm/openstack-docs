@@ -62,7 +62,7 @@ location when provisioning shares.
 .. important::
 
    For Pure Storage's Manila driver, a Manila storage pool is a
-   single FlashBlade.
+   single FlashBlade or FlashArray.
 
 .. _manila_driver:
 
@@ -128,7 +128,9 @@ criteria.
       block storage to clients (e.g. ``NFS_CIFS``)
 
    For a table of Pure Storage supported extra specs, refer to Table 9.11,
-   ":ref:`FlashBlade supported Extra Specs for use with Manila Share Types<table-9.11>`".
+   ":ref:`FlashBlade supported Extra Specs for use with Manila Share Types<table-9.11>`"
+   and Table 9.11, 
+   ":ref:`FlashArray supported Extra Specs for use with Manila Share Types<table-9.12>`"
 
 Snapshot
 --------
@@ -170,6 +172,9 @@ specified.
 .. important::
     Currently the Pure Storage FlashBlade driver DOES NOT support
     the extra-spec ``create_share_from_snapshot_support``.
+    Currently the Pure Storage FlashArray driver DOES NOT support
+    the extra-specs ``create_share_from_snapshot_support`` or
+    ``revert_from_snaphot``.
 
 Share Group
 -----------
@@ -200,8 +205,8 @@ specified.
 
 .. important::
 
-   For the FlashBlade driver, share access is enforced through the
-   use of NFS export controls configured within the FlashBlade.
+   For both the FlashBlade and FlashArray drivers, share access is enforced
+   through the use of NFS export controls configured within the backend.
 
 Security Services
 -----------------
@@ -261,7 +266,7 @@ writable, readable, and DR.
 
 .. important::
 
-   The FlashBlade driver does not currently support Share Replicas
+   Neither the FlashBlade or FlashArray drivers does support Share Replicas
 
 Share Management
 ----------------
@@ -276,5 +281,5 @@ making it possible to import the share to Manila control if desired.
 
 .. important::
 
-   At this time the FlashBlade driver does not support manage/unmanage of shared
-   filesystems on a FlashBlade.
+   At this time neither the FlashBlade or FlashArray drivers support
+   manage/unmanage of shared filesystems.

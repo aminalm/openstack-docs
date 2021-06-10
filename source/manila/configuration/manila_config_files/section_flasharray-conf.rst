@@ -21,7 +21,7 @@ Table 9.15 lists the required storage system attributes used in the
 .. _table-9.15:
 
 +--------------------------------------+----------------------------+---------------------------------------------+
-| FlashBlade Attribute                 | Default                    | Description                                 |
+| FlashArray Attribute                 | Default                    | Description                                 |
 +======================================+============================+=============================================+
 | ``flasharray_mgmt_vip``              | None                       | FlashArray Management VIP                   |
 +--------------------------------------+----------------------------+---------------------------------------------+
@@ -59,9 +59,10 @@ system and the OpenStack Manila service. (See Table 9.16.)
 .. _table-9.16:
 
 +--------------------------------------------------+----------------------------+----------------------------------------------------+
-| FlashBlade Attribute                             | Default      | Description                                                      |
+| FlashArray Attribute                             | Default      | Description                                                      |
 +==================================================+============================+====================================================+
-| ``flashblade_eradicate``                         | True         | Enable auto-eradication of deleted shares and snapshots.         |
+| ``flasharray_eradicate``                         | True         | Enable auto-eradication of deleted shares and snapshots.         |
++--------------------------------------------------+----------------------------+----------------------------------------------------+
 | ``pure_automatic_max_oversubscription_ratio``    | True         | Allow FlashArray to calculate the array oversubscription ratio.  |
 +--------------------------------------------------+----------------------------+----------------------------------------------------+
 
