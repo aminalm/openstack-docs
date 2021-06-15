@@ -47,74 +47,37 @@ the Overcloud resources by creating environment files.
 
 To ensure that your RHOSP environment is correctly configured for using
 Pure Storage FlashArrays obtain a copy of `pure-temp.yaml <https://raw.githubusercontent.com/PureStorage-OpenConnect/tripleo-deployment-configs/master/RHOSP16/pure-temp.yaml>`__
-and save this in the ``/home/stack/templates`` directory. This will be required when
+and `<https://raw.githubusercontent.com/PureStorage-OpenConnect/tripleo-deployment-configs/master/RHOSP16/cinder-pure-config.yaml>`__
+and save these in the ``/home/stack/templates`` directory. These will be required when
 deploying the Overcloud.
 
 Multiple back end configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Define Pure Storage Cinder back ends using Custom THT Configuration syntax.
-It's possible to define all the back ends in a single environment file, but for
-sake of clarity, the following example organizes the back ends in multiple
-smaller environment files:
-
-- ``/home/stack/templates/cinder-flasharray-backend1.yaml``
-
-  This file defines the first Cinder volume back end
-  ``tripleo_pure_1`` and its parameters:
+It's possible to define all the back ends in a single environment file by
+modifying the `cinder-pure-config.yaml` file as follows:
 
   .. code-block:: yaml
     :name: cinder-flasharray-backend1.yaml
 
     parameter_defaults:
-      ControllerExtraConfig:
-        cinder::config::cinder_config:
-          tripleo_pure_1/CinderPureBackendName:
-            value: tripleo_pure_1
-          tripleo_pure_1/CinderPureStorageProtocol:
-            value: 'iSCSI'
-          tripleo_pure_1/CinderPureSanIp:
-            value: san_ip_1
-          tripleo_pure_1/CinderPureAPIToken:
-            value: api_token_1
-
-- ``/home/stack/templates/cinder-purestorage-backend2.yaml``
-
-  This file defines the second Cinder volume back end
-  ``tripleo_pure_2`` and its parameters:
-
-  .. code-block:: yaml
-    :name: cinder-flasharray-backend2.yaml
-
-    parameter_defaults:
-      ControllerExtraConfig:
-        cinder::config::cinder_config:
-          tripleo_pure_2/CinderPureBackendName:
-            value: tripleo_pure_2
-          tripleo_pure_2/CinderPureStorageProtocol:
-            value: 'iSCSI'
-          tripleo_pure_2/CinderPureSanIp:
-            value: san_ip_2
-          tripleo_pure_2/CinderPureAPIToken:
-            value: api_token_2
+      CinderPureBackendName:
+        - tripleo_pure_1
+        - tripleo_pure_2
+      CinderPureStorageProtocol: 'iSCSI' # Default value for all Pure backends
+      CinderPureUseChap: false # Default value for the Pure backends
+      CinderPureMultiConfig:
+        tripleo_pure_1:
+          CinderPureSanIp: '10.0.0.1'
+          CinderPureAPIToken: 'secret'
+        tripleo_pure_2:
+          CinderPureSanIp: '10.0.0.2'
+          CinderPureAPIToken: 'anothersecret'
+          CinderPureUseChap: true # Specific value for this backend
 
   Modify the parameter values according to your Pure Storage back end
   configuration.
-
-- ``/home/stack/templates/cinder-enabled-backends.yaml``
-
-  This file defines which back ends will be enabled. In this example, two
-  back ends ``tripleo_pure_1`` and ``tripleo_pure_2`` will be
-  enabled:
-
-  .. code-block:: yaml
-    :name: cinder-enabled-backends.yaml
-
-    parameter_defaults:
-      ControllerExtraConfig:
-        cinder_user_enabled_backends:
-          - 'tripleo_pure_1'
-          - 'tripleo_pure_2'
 
 .. note::
 

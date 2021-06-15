@@ -47,8 +47,9 @@ the Overcloud resources by creating environment files.
 
 To ensure that your RHOSP environment is correctly configured for using
 Pure Storage FlashArrays obtain a copy of `pure-temp.yaml <https://raw.githubusercontent.com/PureStorage-OpenConnect/tripleo-deployment-configs/master/RHOSP16.1/pure-temp.yaml>`__
-and `cinder-pure-config.yaml <>`__ and save these in the ``/home/stack/templates``
-directory. This will be required when deploying the Overcloud.
+and `cinder-pure-config.yaml <https://raw.githubusercontent.com/PureStorage-OpenConnect/tripleo-deployment-configs/master/RHOSP16.1/cinder-pure-config.yaml>`__ 
+and save these in the ``/home/stack/templates``
+directory. These will be required when deploying the Overcloud.
 
 Multiple back end configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
