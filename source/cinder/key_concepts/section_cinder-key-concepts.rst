@@ -131,7 +131,7 @@ The Cinder Quality of Service (QoS) support for volumes can be enforced
 either at the hypervisor.
 
 For more details of the parameters that can be set for hypervisor
-enforced QoS refer to the `Cinder basic volume quality of service documentation.<https://docs.openstack.org/cinder/latest/admin/blockstorage-basic-volume-qos.html>`_
+enforced QoS refer to the `Cinder basic volume quality of service documentation. <https://docs.openstack.org/cinder/latest/admin/blockstorage-basic-volume-qos.html>`__
 
 Generic Volume Groups
 ---------------------
