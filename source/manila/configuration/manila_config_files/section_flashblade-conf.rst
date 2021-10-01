@@ -50,17 +50,17 @@ the cluster admin login credentials
 
 Optional Manila Configuration Attributes
 ----------------------------------------
-You can optionally use the following attributes specific to FlashArray
+You can optionally use the following attributes specific to FlashBlade
 in the ``[pure]`` section of the ``/etc/manila/manila.conf``
 configuration file to control the interaction between the storage
 system and the OpenStack Manila service. (See Table 9.13.)
 
 .. _table-9.14:
 
-+--------------------------------------------------+----------------------------+----------------------------------------------------+
++--------------------------------------------------+--------------+------------------------------------------------------------------+
 | FlashBlade Attribute                             | Default      | Description                                                      |
-+==================================================+============================+====================================================+
++==================================================+==============+==================================================================+
 | ``flashblade_eradicate``                         | True         | Enable auto-eradication of deleted shares and snapshots.         |
-+--------------------------------------------------+----------------------------+----------------------------------------------------+
++--------------------------------------------------+--------------+------------------------------------------------------------------+
 
 Table 9.14. Optional FlashBlade Attributes
