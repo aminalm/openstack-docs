@@ -12,7 +12,7 @@ and writable block storage that could be utilized as the root disk for a
 compute instance, or as secondary storage that could be attached and/or
 detached from a compute instance. The underlying connection between the
 consumer of the volume and the Cinder service providing the volume can
-be achieved with the iSCSI, NFS, or Fibre Channel storage protocols
+be achieved with the iSCSI, NFS, NVMe or Fibre Channel storage protocols
 (dependent on the support of the Cinder driver deployed).
 
 Cinder volumes can be identified uniquely through a UUID assigned by the
@@ -34,7 +34,7 @@ create the necessary metadata within the Cinder database to allow it to
 be managed like any other Cinder volume. The operation will also rename
 the volume to a name appropriate to the particular Cinder driver in use.
 The imported storage object could be a file, LUN, or a volume depending
-on the protocol (iSCSI/FC/NFS). This feature is
+on the protocol (iSCSI/FC/NVMe/NFS). This feature is
 useful in migration scenarios where virtual machines or other data need
 to be managed by Cinder; refer to the section called
 ":ref:`cinder-manage`" for an example of the ``cinder manage`` command.
@@ -117,8 +117,8 @@ are created on storage backends that meet the specified criteria.
 
 .. note::
 
-   Pure Storage drivers support multi-attachment of volumes for iSCSI
-   and FC protocols from the Stein release. This enables attaching a
+   Pure Storage drivers support multi-attachment of volumes for iSCSI, FC
+   and NVMe protocols from the Stein release. This enables attaching a
    volume to multiple servers simultaneously and can be configured
    by creating an extra-spec ``multiattach="<is> True`` for the associated
    Cinder volume type.
@@ -270,3 +270,9 @@ As of Victoria release the FlashArray driver supports the revert to snapshot fea
 This feature can be used to overwrite the current state and data of a volume to the most
 recent snapshot taken. The volume can not be reverted if it was extended after
 taking the snapshot.
+
+NVMe Support
+------------
+
+As of the Zed release the FlashArray driver supports NVMe as a transport protocol,
+with the initial release of this driver only supporting the RoCE/RDMA layer.
