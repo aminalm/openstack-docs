@@ -244,7 +244,9 @@ supercedes
 svc
 terabytes
 throughputs
+tri
 triaging
+trisync
 uid
 unconfigured
 undercloud
