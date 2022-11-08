@@ -133,7 +133,7 @@ target backend configured and being referenced by primary host under
 
    The secondary FlashArray is not required to be managed by OpenStack at all.
 
-The value for the ``type`` key can be either ``sync``, ``async`` or ``trisync``.
+The value for the ``type`` key can be either ``sync`` or ``async``.
 
 If the ``type`` is ``sync`` volumes will be created in a stretched ActiveCluster
 Pod. This requires two arrays preconfigured with ActiveCluster enabled. You can
