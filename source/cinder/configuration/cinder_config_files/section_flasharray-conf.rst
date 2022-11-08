@@ -45,7 +45,8 @@ the cluster admin login credentials
     pure_api_token=
 
 For ``PURE_VOLUME_DRIVER`` use either ``cinder.volume.drivers.pure.PureISCSIDriver`` for iSCSI or
-``cinder.volume.drivers.pure.PureFCDriver`` for Fibre Channel connectivity.
+``cinder.volume.drivers.pure.PureFCDriver`` for Fibre Channel or
+``cinder.volume.drivers.pure.PureNVMEDriver`` for NVMe connectivity.
 
 Optional Cinder Configuration Attributes
 ----------------------------------------
@@ -86,6 +87,12 @@ system and the OpenStack Cinder service. (See Table 7.14.)
 | ``pure_iscsi_cidr``                                  | ``0.0.0.0/0``              | CIDR of FlashArray iSCSI targets hosts are allowed to connect to. Default will allow connection to any IPv4 address. This parameter now support IPv6 CIDRs. It is overriden by ``pure_iscsi_cidr_list`` if set  |
 +------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``pure_iscsi_cidr_list``                             | ``[]``                     | List of IPv4 and IPv6 CIDR ranges of FlashArray iSCSI targets hosts are allowed to connect to. Default allows connection to any IPv4 or IPv6 address. This parameter supercedes ``pure_iscsi_cidr`` if set.     |
++------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``pure_nvme_cidr``                                   | ``0.0.0.0/0``               | CIDR of FlashArray NVMe targets hosts are allowed to connect to. Default will allow connection to any IPv4 address. This parameter now support IPv6 CIDRs. It is overriden by ``pure_nvme_cidr_list`` if set.  |
++------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``pure_nvme_cidr_list``                              | ``[]``                      | List of IPv4 and IPv6 CIDR ranges of FlashArray NMVe targets hosts are allowed to connect to. Default allows connection to any IPv4 or IPv6 address. This parameter supercedes ``pure_nvme_cidr`` if set.      |
++------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``pure_nvme_transport``                              | ``roce``                    | The NVMe transport layer to be used by the NVMe driver. This only supports RoCE at this time.                                                                                                                  |
 +------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Table 7.14. Optional FlashArray Attributes

@@ -56,6 +56,7 @@ Multipath
 NFS
 Navneet
 Nondisruptive
+NVMe
 OSTK
 Ocata
 Olby
@@ -70,8 +71,10 @@ PureStorage
 PureStorageDriver
 QoS
 Rackspace
+RDMA
 Resizing
 Resync
+RoCE
 Rushi
 SLA
 SSD
