@@ -8,7 +8,7 @@ OpenStack clouds powered by Pure Storage FlashArray.
 
 The latest build of this documentation is live here:
 
- https://<TBD>
+ [https://pure-storage-openstack-docs.readthedocs.io/en/latest/](https://pure-storage-openstack-docs.readthedocs.io/en/latest/)
 
 
 Contributing
