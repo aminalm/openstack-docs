@@ -82,6 +82,8 @@ system and the OpenStack Cinder service. (See Table 7.14.)
 +------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``pure_replication_pg_name``                         | ``cinder-group``           | Pure Protection Group name to use for async replication (will be created if it does not exist).                                                                                                                 |
 +------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``pure_trisync_pg_name``                             | ``cinder-trisync``         | Pure Protection Group name to use for trisync replication leg inside the sync replication pod (will be created if it does not exist).                                                                           |
++------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``pure_replication_pod_name``                        | ``cinder-pod``             | Pure Pod name to use for sync replication (will be created if it does not exist).                                                                                                                               |
 +------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``pure_iscsi_cidr``                                  | ``0.0.0.0/0``              | CIDR of FlashArray iSCSI targets hosts are allowed to connect to. Default will allow connection to any IPv4 address. This parameter now support IPv6 CIDRs. It is overriden by ``pure_iscsi_cidr_list`` if set. |
@@ -93,6 +95,8 @@ system and the OpenStack Cinder service. (See Table 7.14.)
 | ``pure_nvme_cidr_list``                              | ``[]``                     | List of IPv4 and IPv6 CIDR ranges of FlashArray NMVe targets hosts are allowed to connect to. Default allows connection to any IPv4 or IPv6 address. This parameter supercedes ``pure_nvme_cidr`` if set.       |
 +------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``pure_nvme_transport``                              | ``roce``                   | The NVMe transport layer to be used by the NVMe driver. This only supports RoCE at this time.                                                                                                                   |
++------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``pure_trisync_enabled``                             | False                      | Enable tri-sync replication.                                                                                                                                                                                    |
 +------------------------------------------------------+----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Table 7.14. Optional FlashArray Attributes
@@ -110,14 +114,14 @@ target backend configured and being referenced by primary host under
     volume_backend_name=pure
     volume_driver=cinder.volume.drivers.pure.PureISCSIDriver
     san_ip=192.168.1.55
-    pure_api_token=login
+    pure_api_token=PURE_API_TOKEN
     replication_device=backend_id:pure-2,san_ip:192.168.1.32,api_token::type:async
 
     [pure-2]
     volume_backend_name=pure2
     volume_driver=cinder.volume.drivers.pure.PureISCSIDriver
     san_ip=192.18.1.32
-    pure_api_token=
+    pure_api_token=PURE_API_TOKEN
 
     [DEFAULT]
     enabled_backends=pure
@@ -129,10 +133,10 @@ target backend configured and being referenced by primary host under
 
    The secondary FlashArray is not required to be managed by OpenStack at all.
 
-The value for the ``type`` key can be either ``sync`` or ``async``.
+The value for the ``type`` key can be either ``sync``, ``async`` or ``trisync``.
 
-If the ``type`` is ``sync`` volumes will be created in a stretched ActiveCluster Pod. This
-requires two arrays preconfigured with ActiveCluster enabled. You can
+If the ``type`` is ``sync`` volumes will be created in a stretched ActiveCluster
+Pod. This requires two arrays preconfigured with ActiveCluster enabled. You can
 optionally specify ``uniform`` as ``true`` or ``false``, which will instruct
 the driver that data paths are uniform between arrays in the cluster and data
 connections should be made to both upon attaching.
@@ -140,11 +144,17 @@ connections should be made to both upon attaching.
 Note that more than one ``replication_device`` line can be added to allow for
 multi-target device replication.
 
+To enable 3-site replication, ie. a volume that is synchronously replicated to
+one array and also asynchronously replicated to another then you must supply
+two, and only two, ``replication_device`` lines, where one has ``type`` of
+``sync`` and one where ``type`` is ``async``. Additionally, the parameter
+``pure_trisync_enabled`` must be set ``True``.
+
 A volume is only replicated if the volume is of a volume-type that has
 the extra spec ``replication_enabled`` set to ``<is> True``. You can optionally
 specify the ``replication_type`` key to specify ``<in> sync`` or ``<in> async``
-to choose the type of replication for that volume. If not specified it will
-default to ``async``.
+or ``<in> trisync`` to choose the type of replication for that volume. If not
+specified it will default to ``async``.
 
 To create a volume type that specifies replication to remote back ends with
 async replication:
