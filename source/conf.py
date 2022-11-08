@@ -65,6 +65,7 @@ releases = [
     'austin', 'bexar', 'cactus', 'diablo', 'essex', 'folsom', 'grizzly',
     'havana', 'icehouse', 'juno', 'kilo', 'liberty', 'mitaka', 'newton',
     'ocata', 'pike', 'queens', 'rocky', 'stein', 'train', 'ussuri', 'victoria',
+    'wallaby', 'xena', 'yoga', 'zed', '2023.11,
 ]
 unnamed = list(string.ascii_lowercase[len(releases) % 26:])
 releases += unnamed
@@ -130,9 +131,9 @@ copyright = u'2022, Pure Storage Inc.'
 # built documents.
 #
 # The short X.Y version.
-version = '2022.1'
+version = '2023.1'
 # The full version, including alpha/beta/rc tags.
-release = '2022.1'
+release = '2023.1'
 
 # A few variables have to be set for the log-a-bug feature.
 #   giturl: The location of conf.py on Git. Must be set manually.
