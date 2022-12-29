@@ -154,7 +154,7 @@ Create a new environment file ``custom_container_pure.yaml`` in the directory
 .. code-block:: bash
 
   parameter_defaults:
-    DockerCinderVolumeImage: <registry:port>/<directory>/openstack-cinder-volume-pure:latest
+    ContainerCinderVolumeImage: <registry:port>/<directory>/openstack-cinder-volume-pure:latest
 
 Alternatively, you may edit the container images environment file (usually
 ``overcloud_images.yaml``, created when the ``openstack overcloud container
