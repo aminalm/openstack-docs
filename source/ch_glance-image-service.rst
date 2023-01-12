@@ -7,3 +7,4 @@ Image Service (Glance)
    glance/overview/section_glance-overview.rst
    glance/key_concepts/section_glance-key-concepts.rst
    glance/ch_glance-configuration.rst
+   glance/rhosp_director_glance_image_cache.rst
