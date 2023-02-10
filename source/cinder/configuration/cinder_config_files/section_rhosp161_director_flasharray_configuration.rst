@@ -259,8 +259,11 @@ has been set in the Nova configuration file), where the following example messag
 Until this issue is resolved in OpenStack, the workaround for Pure Storage is to set the
 ``host_personality`` parameter in the backend array stanza in the configuration file to the
 following:
+
 .. code-block:: bash
   :name: personality
+
   host_personality=oracle-vm-server
+
 This parameter instructs the FlashArray to use peripheral LUN ID addressing for all LUN, no
 matter the LUN ID.
