@@ -252,8 +252,10 @@ has been set in the Nova configuration file), where the following example messag
 
 .. code-block:: bash
   :name: nove-logs
+  
   2023-02-03 18:00:40.439 8 DEBUG os_brick.initiator.linuxscsi [req-2b5c8045-6845-4b92-8f13-2370cf907a8c - default default]
         Searching for a device in session 6 and hctl ('12', '0', '0', 356) yield: None device_name_by_hctl /usr/lib/python3.6/site-packages/os_brick/initiator/linuxscsi.py:698
+
 Until this issue is resolved in OpenStack, the workaround for Pure Storage is to set the
 ``host_personality`` parameter in the backend array stanza in the configuration file to the
 following:
