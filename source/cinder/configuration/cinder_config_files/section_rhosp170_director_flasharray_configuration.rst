@@ -48,8 +48,9 @@ the Overcloud resources by creating environment files.
 To ensure that your RHOSP environment is correctly configured for using
 Pure Storage FlashArrays obtain a copy of `pure-temp.yaml <https://raw.githubusercontent.com/PureStorage-OpenConnect/tripleo-deployment-configs/master/RHOSP17.0/pure-temp.yaml>`__
 and `cinder-pure-config.yaml <https://raw.githubusercontent.com/PureStorage-OpenConnect/tripleo-deployment-configs/master/RHOSP17.0/cinder-pure-config.yaml>`__ 
-and save these in the ``/home/stack/templates``
-directory. These will be required when deploying the Overcloud.
+from the Pure Storage TripleO Deployment Config repo and save these in
+the ``/home/stack/templates`` directory. These will be required when
+deploying the Overcloud.
 
 Multiple back end configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -137,13 +138,13 @@ container:
 
  .. code-block:: bash
  
-    sudo buildah bud . -t "openstack-cinder-volume-pure:latest"
+    sudo buildah bud . -t "openstack-cinder-volume-pure:<version>"
 
  * Push the new image to a local registry
 
  .. code-block:: bash
 
-    sudo openstack tripleo container image push --local <registry:port>/<directory>/openstack-cinder-volume-pure:latest
+    sudo openstack tripleo container image push --local <registry:port>/<directory>/openstack-cinder-volume-pure:<version>
 
 Create a Custom Environment File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -154,7 +155,7 @@ Create a new environment file ``custom_container_pure.yaml`` in the directory
 .. code-block:: bash
 
   parameter_defaults:
-    ContainerCinderVolumeImage: <registry:port>/<directory>/openstack-cinder-volume-pure:latest
+    ContainerCinderVolumeImage: <registry:port>/<directory>/openstack-cinder-volume-pure:<version>
 
 Alternatively, you may edit the container images environment file (usually
 ``overcloud_images.yaml``, created when the ``openstack overcloud container
