@@ -120,32 +120,6 @@ Container when deploying RHOSP17.0 with a Pure Storage FlashArray backend.
 This container can be found in the `Red Hat Container Catalog <https://catalog.redhat.com/software/containers/search?q=pure&p=1>`__
 and should be stored in a local registry.
 
-Alternatively, you may build your own version of this container and store it
-within a local registry.
-
-Follow these steps to build your own version of the Pure Storage Cinder Volume
-container:
-
- * Obtain a copy of the `Dockerfile <https://raw.githubusercontent.com/PureStorage-OpenConnect/tripleo-deployment-configs/master/RHOSP17.0/Dockerfile>`__
-
- * Login to the Red Hat registry
-
- .. code-block:: bash
-
-    sudo buildah login registry.redhat.io
-
- * Build the podman image
-
- .. code-block:: bash
- 
-    sudo buildah bud . -t "openstack-cinder-volume-pure:<version>"
-
- * Push the new image to a local registry
-
- .. code-block:: bash
-
-    sudo openstack tripleo container image push --local <registry:port>/<directory>/openstack-cinder-volume-pure:<version>
-
 Create a Custom Environment File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
