@@ -10,4 +10,6 @@ Cinder Configuration Files
    cinder_config_files/section_sample_cinder-conf.rst
    cinder_config_files/section_rhosp16_director_flasharray_configuration.rst
    cinder_config_files/section_rhosp161_director_flasharray_configuration.rst
+   cinder_config_files/section_rhosp162_director_flasharray_configuration.rst
+   cinder_config_files/section_rhosp170_director_flasharray_configuration.rst
    cinder_config_files/section_flasharray-conf-train.rst
